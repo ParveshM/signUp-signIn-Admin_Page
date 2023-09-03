@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UMS</title>
+    <link rel="stylesheet" href="/styles/editUser.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+
+<body> 
+    <div class="wrapper">
+        <h2>Edit User</h2>
+        <form action="" method="post" >
+            <div class="input-box">
+                <input id="name" name="name" type="text" value="<%- user.name %>" placeholder="Edit name" required>
+                
+            </div>
+            <div class="input-box">
+                <input id="email" name="email" type="email" value="<%- user.email %>" placeholder="Edit email" required>
+            </div>
+            <input type="hidden" name="id" value="<%- user._id %>">
+            <div class="input-box button">
+                <input type="submit" value="Update User">
+            </div>
+             <button class="btn btn-info"><a href="/admin/dashboard">Go Back</a></button>
+        </form>
+    </div>
+</body>
+
+</html

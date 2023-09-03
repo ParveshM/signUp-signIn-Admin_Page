@@ -1,0 +1,39 @@
+body {
+  background-color: #f0f0f0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-image: url("../assets/login.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.card {
+  background-color: rgba(255, 255, 255, 0.2);
+  border: none;
+  backdrop-filter: blur(10px);
+}
+
+.card-body {
+  background-color: transparent;
+  border: none;
+}
+
+.form-control {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.2);
+  color: white;
+}
+
+.card-title {
+  color: white;
+}
+
+p, label {
+  color: white;
+}
+#emailError,
+#passError{
+  color: red;
+}

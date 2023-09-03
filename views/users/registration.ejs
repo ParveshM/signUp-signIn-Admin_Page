@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="styles/registration.css">
+  <title>Registration</title>
+</head>
+
+<body>
+  <div class="container">
+    <h2 class="mb-4">Sign Up</h2>
+    <form id="myForm" action="/register" method="post" class="bg-transparent">
+      <div class="mb-3">
+        <label for="name" class="form-label">Name</label>
+        <input id="name" type="text" class="form-control" name="name" placeholder="Enter your name" autocomplete="off">
+        <div class="NameError" id="nameError"></div>
+      </div>
+      <div class="mb-3">
+        <label for="email" class="form-label">Email</label>
+        <input id="email" type="text" class="form-control" name="email" placeholder="Enter your email"
+          autocomplete="off">
+        <div class="emailError" id="emailError"></div>
+      </div>
+      <div class="mb-3">
+        <label for="password" class="form-label">Password</label>
+        <input id="password" type="password" class="form-control" name="password" placeholder="Enter a password"
+          autocomplete="off">
+        <div class="passError" id="passError"></div>
+      </div>
+      <div class="mb-3">
+        <label for="repassword" class="form-label">Re-enter Password</label>
+        <input id="repassword" type="password" class="form-control" name="repassword"
+          placeholder="Re-enter your password" autocomplete="off">
+        <div class="rePassError" id="rePassError"></div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <button type="submit" class="btn btn-primary btn-block">Sign Up</button>
+        </div>
+      </div>
+    </form>
+    <div class="login-link mt-3">
+      <p>Already have an account? <a href="/">Login now</a></p>
+    </div>
+
+    <% if (typeof message!=='undefined' ) { %>
+      <div class="alert alert-success text-center mt-5" id="alert" role="alert">
+        <%- message %>
+      </div>
+      <% } %>
+
+        <% if (typeof userCheck!=='undefined' ) { %>
+          <div class="alert alert-danger text-center mt-5" id="alert" role="alert">
+            <%- userCheck %>
+          </div>
+          <% } %>
+  </div>
+  <script src="/js/registrationVal.js"></script>
+
+</body>
+
+</html>
